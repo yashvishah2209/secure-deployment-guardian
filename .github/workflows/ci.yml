@@ -27,3 +27,7 @@ jobs:
       - name: Verify FastAPI Import
         run: |
           python -c "from main import app; print('FastAPI App Loaded Successfully')"
+
+      - name: Build Docker Image
+        run: |
+          docker build -t secure-api .
